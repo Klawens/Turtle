@@ -10,7 +10,7 @@
 
 `pip install -v -e .`
 
-###Convert the images to coco dataset format first
+### Convert the images to coco dataset format first
 
 ### Train:
 `python tools/train.py own_configs/r50.py --no-validate`
