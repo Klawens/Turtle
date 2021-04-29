@@ -23,7 +23,7 @@ model = dict(
         anchor_generator=dict(
             type='AnchorGenerator',
             scales=[12],
-            ratios=[1.0, 1.5],
+            ratios=[1.0],
             strides=[4, 8, 16, 32, 64]),
         bbox_coder=dict(
             type='DeltaXYWHBBoxCoder',
@@ -174,7 +174,7 @@ model = dict(
             nms=dict(type='nms', iou_threshold=0.7),
             min_bbox_size=0),
         rcnn=dict(
-            score_thr=0.05,
+            score_thr=0.25,
             nms=dict(type='nms', iou_threshold=0.5),
             max_per_img=1)))
 dataset_type = 'CocoDataset'
@@ -233,7 +233,7 @@ data = dict(
         img_prefix='data/IMAGES_1024/',
         pipeline=test_pipeline))
 evaluation = dict(interval=1, metric='bbox')
-optimizer = dict(type='SGD', lr=0.008, momentum=0.9, weight_decay=0.0001)
+optimizer = dict(type='SGD', lr=0.0075, momentum=0.9, weight_decay=0.0001)
 optimizer_config = dict(grad_clip=None)
 lr_config = dict(
     policy='step',
