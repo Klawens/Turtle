@@ -18,7 +18,7 @@
 ### Inference and generate json result (other format please reference mmdetection official tutorial):
 `python tools/test.py own_configs/r50.py best_model.pth --format-only --eval-options "jsonfile_prefix=xxx"`
 #### The `inference.py` is for visualization.
-### All the parameters, including IoU thres, confident thres, you can tune it in the `own_configs/r50.py` `( test_cfg )`
+### All the parameters and dataset path, including IoU thres, confident thres, you can tune it in the `own_configs/r50.py` `( test_cfg )`
 
 ### Dataset:
 #### Check `data/make_dataset` to convert the raw images to coco format for inference (get the boxes)
